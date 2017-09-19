@@ -21,6 +21,21 @@ public class Magpie2
 		return "Hello, let's talk.";
 	}
 	
+	public void findKeyword(String statement, String lookingFor)
+    {
+        int initSize = statement.length();
+        statement = statement.toLowerCase();
+        lookingFor = lookingFor.toLowerCase();
+        for(int i = 0; i<statement.length()-lookingFor.length()+1; i++){
+            if(statement.substring(i, i + lookingFor.length()).equals(lookingFor)){
+                System.out.print(i);
+                System.out.print(" & ");
+            }
+            else {
+                //System.out.print(" & ");
+            }
+        }
+    }
 	/**
 	 * Gives a response to a user statement
 	 * 
